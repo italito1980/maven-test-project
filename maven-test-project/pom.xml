@@ -1,25 +1,190 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
-  <groupId>com.mytests</groupId>
-  <artifactId>maven-test-project</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <groupId>com.mytests.selenium.maven</groupId>
+  <artifactId>selenium-maven</artifactId>
   <packaging>jar</packaging>
-
-  <name>maven-test-project</name>
+  <version>1.0-SNAPSHOT</version>
+  <name>selenium-maven</name>
   <url>http://maven.apache.org</url>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
   <dependencies>
-    <dependency>
+<!--    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
-    </dependency>
-  </dependencies>
+    </dependency>-->
+    <dependency>
+  		<groupId>org.testng</groupId>
+  		<artifactId>testng</artifactId>
+  		<version>6.11</version>
+  		<scope>test</scope>
+	</dependency>
+	<dependency>
+    	<groupId>org.seleniumhq.selenium</groupId>
+    	<artifactId>selenium-java</artifactId>
+    	<version>3.13.0</version>
+	</dependency>    
+    <dependency>
+    	<groupId>io.rest-assured</groupId>
+    	<artifactId>rest-assured</artifactId>
+    	<version>3.1.0</version>
+    <scope>test</scope>
+	</dependency>
+    <dependency>
+    	<groupId>io.appium</groupId>
+    	<artifactId>java-client</artifactId>
+    	<version>6.1.0</version>
+	</dependency>
+
+	<dependency>
+    	<groupId>org.apache.logging.log4j</groupId>
+    	<artifactId>log4j-api</artifactId>
+    	<version>2.11.0</version>
+	</dependency>
+
+	<dependency>
+    	<groupId>org.apache.logging.log4j</groupId>
+    	<artifactId>log4j-core</artifactId>
+    	<version>2.11.0</version>
+	</dependency>
+	<dependency>
+    	<groupId>com.jayway.restassured</groupId>
+    	<artifactId>rest-assured</artifactId>
+    	<version>2.9.0</version>
+    	<scope>test</scope>
+	</dependency>
+	<dependency>
+    	<groupId>com.jayway.jsonpath</groupId>
+    	<artifactId>json-path</artifactId>
+    	<version>2.4.0</version>
+	</dependency>
+	<dependency>
+    	<groupId>io.rest-assured</groupId>
+    	<artifactId>xml-path</artifactId>
+    	<version>3.1.0</version>
+	</dependency>	
+	
+	<dependency>
+    	<groupId>io.rest-assured</groupId>
+    	<artifactId>json-schema-validator</artifactId>
+    	<version>3.1.0</version>
+	</dependency>
+	<dependency>
+    	<groupId>org.json</groupId>
+    	<artifactId>json</artifactId>
+    	<version>20180130</version>
+	</dependency>
+<!-- 	<dependency> -->
+<!--     	<groupId>org.scribe</groupId> -->
+<!--     	<artifactId>scribe</artifactId> -->
+<!--     	<version>1.3.2</version> -->
+<!-- 	</dependency>	 -->
+<!-- 	<dependency> -->
+<!--     	<groupId>junit</groupId> -->
+<!--     	<artifactId>junit</artifactId> -->
+<!--     	<version>4.12</version> -->
+<!--     	<scope>test</scope> -->
+<!-- 	</dependency>	 -->
+
+<!-- 	<dependency> -->
+<!-- 	    <groupId>org.junit.platform</groupId> -->
+<!-- 	    <artifactId>junit-platform-launcher</artifactId> -->
+<!-- 	    <version>1.3.0-M1</version> -->
+<!-- 	    <scope>test</scope> -->
+<!-- 	</dependency> -->
+
+<!-- 	<dependency> -->
+<!-- 	    <groupId>org.junit.jupiter</groupId> -->
+<!-- 	    <artifactId>junit-jupiter-engine</artifactId> -->
+<!-- 	    <version>5.3.0-M1</version> -->
+<!-- 	    <scope>test</scope> -->
+<!-- 	</dependency> -->
+	
+<!-- 	<dependency> -->
+<!--     	<groupId>org.junit.vintage</groupId> -->
+<!--     	<artifactId>junit-vintage-engine</artifactId> -->
+<!--     	<version>5.3.0-M1</version> -->
+<!--     	<scope>test</scope> -->
+<!-- 	</dependency> -->
+	
+
+<!-- 	<dependency> -->
+<!-- 	    <groupId>org.junit.jupiter</groupId> -->
+<!-- 	    <artifactId>junit-jupiter-api</artifactId> -->
+<!-- 	    <version>5.3.0-M1</version> -->
+<!-- 	    <scope>test</scope> -->
+<!-- 	</dependency> -->
+
+	
+</dependencies>
+  
+  <profiles>
+<!--  	<profile>
+  		<id>Regression</id>
+  		    <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.0</version>
+          
+          <configuration>
+          	<suiteXmlFiles>
+          		<suiteXmlFile>src/test/java/com/mytests/selenium/maven/xml/testngRegression.xml</suiteXmlFile>
+          	</suiteXmlFiles>
+          </configuration>  
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+  		
+  	</profile>-->
+  	<profile>
+  		<id>Smoke</id>
+  		    <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.0</version>
+          
+          <configuration>
+          	<suiteXmlFiles>
+          		<suiteXmlFile>src/test/java/com/mytests/restapi/xml/smokeTest.xml</suiteXmlFile>
+          	</suiteXmlFiles>
+          </configuration>  
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+  		
+  	</profile>
+
+<!--  	<profile>
+  		<id>RestAPI</id>
+  		    <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.0</version>
+          
+          <configuration>
+          	<suiteXmlFiles>
+          		<suiteXmlFile>src/test/java/com/mytests/selenium/maven/xml/testngTwitter.xml</suiteXmlFile>
+          	</suiteXmlFiles>
+          </configuration>  
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+  		
+  	</profile>-->
+
+  </profiles>
+  
 </project>
