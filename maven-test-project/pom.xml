@@ -28,7 +28,7 @@
     <dependency>
     	<groupId>io.rest-assured</groupId>
     	<artifactId>rest-assured</artifactId>
-    	<version>3.1.0</version>
+    	<version>3.1.1</version>
     <scope>test</scope>
 	</dependency>
     <dependency>
@@ -48,27 +48,27 @@
     	<artifactId>log4j-core</artifactId>
     	<version>2.11.0</version>
 	</dependency>
+<!-- 	<dependency> -->
+<!--     	<groupId>com.jayway.restassured</groupId> -->
+<!--     	<artifactId>rest-assured</artifactId> -->
+<!--     	<version>2.9.0</version> -->
+<!--     	<scope>test</scope> -->
+<!-- 	</dependency> -->
 	<dependency>
-    	<groupId>com.jayway.restassured</groupId>
-    	<artifactId>rest-assured</artifactId>
-    	<version>2.9.0</version>
-    	<scope>test</scope>
-	</dependency>
-	<dependency>
-    	<groupId>com.jayway.jsonpath</groupId>
+    	<groupId>io.rest-assured</groupId>
     	<artifactId>json-path</artifactId>
-    	<version>2.4.0</version>
+    	<version>3.1.1</version>
 	</dependency>
 	<dependency>
     	<groupId>io.rest-assured</groupId>
     	<artifactId>xml-path</artifactId>
-    	<version>3.1.0</version>
+    	<version>3.1.1</version>
 	</dependency>	
 	
 	<dependency>
     	<groupId>io.rest-assured</groupId>
     	<artifactId>json-schema-validator</artifactId>
-    	<version>3.1.0</version>
+    	<version>3.1.1</version>
 	</dependency>
 	<dependency>
     	<groupId>org.json</groupId>
@@ -153,7 +153,7 @@
           
           <configuration>
           	<suiteXmlFiles>
-          		<suiteXmlFile>src/test/java/com/mytests/restapi/xml/smokeTest.xml</suiteXmlFile>
+          		<suiteXmlFile>src/test/java/com/mytests/maven/testng/restapi/xml/smokeTest.xml</suiteXmlFile>
           	</suiteXmlFiles>
           </configuration>  
         </plugin>
