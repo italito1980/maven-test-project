@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TestSuite]">
+  <test name="SmokeTest(failed)">
+    <classes>
+      <class name="com.mytests.maven.testng.restapi.testcases.GoogleSearchPlacesTest">
+        <methods>
+          <include name="searchPlaces"/>
+        </methods>
+      </class> <!-- com.mytests.maven.testng.restapi.testcases.GoogleSearchPlacesTest -->
+    </classes>
+  </test> <!-- SmokeTest(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->

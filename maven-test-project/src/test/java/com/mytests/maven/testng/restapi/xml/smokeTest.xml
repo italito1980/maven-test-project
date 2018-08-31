@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<suite name="TestSuite">
+    <test name="SmokeTest">
+        <classes>
+            <class name="com.mytests.maven.testng.restapi.testcases.GoogleSearchPlacesTest"/>                
+        </classes>
+    </test>
+</suite>
